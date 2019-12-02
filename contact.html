@@ -1,0 +1,103 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+    <div id="mainContent">
+        <div class="container-fluid">
+            <!-- Container1 -->
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="header-right col-lg-6 col-md-6 bg-custompink">
+                    <h1>
+                        Contact Us
+                    </h1>
+                    <p class="pt-20">
+                        If you had been diagnosed with breast cancer or have detected early signs of the conditions,
+                        <br>
+                        there are ways to fight back and defeat the cancer. Do your part.
+                    </p>
+
+                </div>
+                <div class="col-lg-6 col-md-6 header-left bg-light">
+                    <div class="">
+                        <img class="img-fluid img-grey w-100" style="padding:0px;"
+                            src="https://picsum.photos/id/646/600/191" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div><!-- End Container1 -->
+
+        <section class="popular-place-area section_gap">
+            <!-- Container 2 -->
+            <div class="main_title">
+                <h1 class="text-center">Methods</h1>
+            </div>
+        </section> <!-- End Container 2 -->
+        <!--Container 3-->
+
+        <!-- Start Navigation -->
+        <nav class="navbar fixed-top navbar-light transparent">
+            <button class="navbar-toggler transparent" id="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNav()">
+                <span class="navbar-dark transparent navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        <div id="mySidenav" class="sidenav bg-dark">
+            <ul class="list menu-left">
+                <li><a class="text-white" href="index.html"">Home</a></li>
+        <li><a class=" text-white" href="stats.html">Statistics</a></li>
+                <li><a class="text-white" href="detect.html">Early Detection</a></li>
+                <li><a class="text-white" href="prevent.html">Prevention</a></li>
+                <li><a class="text-white" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <!-- End Navigation -->
+    </div> <!-- Main Container -->
+
+    <script>
+        $('.carousel').carousel({
+            interval: 2000
+        })
+        //document.getElementById("navbar-toggler").addEventListener("click", toggleNav);
+        function hello() {
+            alert('SEND HELP PLS');
+        }
+
+        function toggleNav() {
+            navSize = document.getElementById("mySidenav").style.width;
+            if (navSize == "250px") {
+                return closeNav();
+            }
+            return openNav();
+        }
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("navbar-toggler").style.marginLeft = "170px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("navbar-toggler").style.marginLeft = "0px";
+        }
+    </script>
+
+</body>
+
+</html>
