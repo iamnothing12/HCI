@@ -34,14 +34,16 @@
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
     background-color: #bbb;
+    border-radius: 25%;
     color: black;
   }
   
   /* Style the back side */
   .flip-card-back {
+    background-image: url("../image/men.jpg");
     background-color: whitesmoke;
+    border-radius: 25%;
     color: black;
-    background-image: url(image/men.jpg);
     transform: rotateY(180deg);
   }
 /****************************************/
