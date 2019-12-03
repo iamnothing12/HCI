@@ -14,6 +14,14 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- including ECharts file -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
 </head>
 
 <body>
@@ -44,6 +52,9 @@
         <div class="main_title">
           <h1 class="text-center">Incidence Rate</h1>
         </div>
+        <div style="height:600px;">
+            <div id="chart_div2"  style="height: 100%"></div>
+          </div>
       </div>
     </section> <!-- End Container 2 -->
     <!--Container 3-->
@@ -52,19 +63,11 @@
         <div class="main_title">
           <h1 class="text-center">Singapore Breast Cancer Cases Over 5 Years</h1>
         </div>
-        <div style="height:370px;">
+        <div style="height:450px;">
           <div id="chart_div"  style="height: 100%"></div>
         </div>
       </div>
     </div> <!-- End Container 3 -->
-    <!--Container 4-->
-    <div>
-      <div class="container">
-        <div class="main_title">
-          <h1 class="text-center">Early Detection Rate</h1>
-        </div>
-      </div>
-    </div> <!-- End Container 4 -->
 
   </div> <!-- Main Container -->
   <!-- Start Navigation -->
@@ -116,6 +119,8 @@
     window.onload = function () {
       document.getElementById('navbar2').style.display = 'none';
       Plotly.newPlot('chart_div', data, layout, {showSendToCloud:true});
+      var dom = document.getElementById("chart_div2");
+      loadOverallChart(echarts.init(dom));
     };
 
     function openNav() {
@@ -190,7 +195,7 @@
   628,777,146,89,7//2017 Survivor Range  
   ],
   outsidetextfont: {size: 20, color: "#377eb8"},
-  // leaf: {opacity: 0.4},
+  leaf: {opacity: 0.3},
   marker: {line: {width: 2}},
   branchvalues: 'total'
 }];
@@ -199,6 +204,174 @@ var layout = {
   margin: {l: 0, r: 0, b: 0, t:0},
   sunburstcolorway:["#636efa","#ef553b","#00cc96"],
 };  
+
+function loadOverallChart(myChart){
+  var app = {};
+option = null;
+var seriesLabel = {
+    normal: {
+        show: true,
+        textBorderColor: '#333',
+        textBorderWidth: 2
+    }
+}
+
+option = {
+    title: {
+        text: 'Top 5  Cancer Statistics in Singapore'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    legend: {
+        data: ['Breast Cancer Survivor','Breast Cancer Death', 
+        'Ovarian cancer Survivor', 'Ovarian cancer Death',
+        'Colon and rectum cancer Survivor', 'Colon and rectum cancer Death', 
+        'Cervical cancer Survivor','Cervical cancer Death',
+        'Lung cancer Survivor','Lung cancer Death'],
+        x: 'center', // 'right' | 'center' | 'left' | {number},
+        y: 'bottom', // 'top' | 'center' | 'bottom' | {number}
+    },
+    grid: {
+        left: 100,
+        bottom: 80
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    xAxis: {
+        type: 'value',
+        name: 'Days',
+        axisLabel: {
+            formatter: '{value}'
+        }
+    },
+    yAxis: {
+        type: 'category',
+        inverse: true,
+        data: ['2013', '2014', '2015','2016','2017'],
+        axisLabel: {
+            formatter: function (value) {
+                return '{' + value + '| }\n{value|' + value + '}';
+            },
+            margin: 20,
+            rich: {
+                value: {
+                    lineHeight: 30,
+                    align: 'center'
+                },
+                2013: {
+                    height: 40,
+                    align: 'center'
+                },
+                2014: {
+                    height: 40,
+                    align: 'center'
+                },
+                2015: {
+                    height: 40,
+                    align: 'center'
+                },
+                2016: {
+                    height: 40,
+                    align: 'center'
+                },
+                2017: {
+                    height: 40,
+                    align: 'center'
+                }
+            }
+        }
+    },
+    series: [
+        {
+            name: 'Breast Cancer Survivor',
+            type: 'bar',
+            stack:'bc',
+            data: [1610,1565,1656,1639,1649],
+            label: seriesLabel,
+            markPoint: {
+                symbolSize: 1,
+                symbolOffset: [0, '50%']
+                
+            }
+        },
+        {
+            name: 'Breast Cancer Death',
+            type: 'bar',
+            stack:'bc',
+            label: seriesLabel,
+            data: [380,388,395,393,396]
+        },
+        {
+            name: 'Ovarian cancer Survivor',
+            type: 'bar',
+            stack:'oc',
+            label: seriesLabel,
+            data: [124,125,128,127,128]
+        },
+        {
+            name: 'Ovarian cancer Death',
+            type: 'bar',
+            stack:'oc',
+            label: seriesLabel,
+            data: [125,127,128,128,131]
+        },
+        {
+            name: 'Colon and rectum cancer Survivor',
+            type: 'bar',
+            stack:'crc',
+            label: seriesLabel,
+            data: [1331,1389,1448,1492,1548]
+        },
+        {
+            name: 'Colon and rectum cancer Death',
+            type: 'bar',
+            stack:'crc',
+            label: seriesLabel,
+            data: [749,769,795,815,845]
+        },
+        {
+            name: 'Cervical cancer Survivor',
+            type: 'bar',
+            stack:'cc',
+            label: seriesLabel,
+            data: [184,188,193,191,188]
+        },
+        {
+            name: 'Cervical cancer Death',
+            type: 'bar',
+            stack:'cc',
+            label: seriesLabel,
+            data: [75,76,77,78,79]
+        },
+        {
+            name: 'Lung cancer Survivor',
+            type: 'bar',
+            stack:'lc',
+            label: seriesLabel,
+            data: [402,424,441,458,476]
+        },
+        {
+            name: 'Lung cancer Death',
+            type: 'bar',
+            stack:'lc',
+            label: seriesLabel,
+            data: [1135,1150,1160,1187,1231]
+        }
+    ]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+}
   </script>
 
 </body>
