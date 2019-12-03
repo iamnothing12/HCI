@@ -227,11 +227,11 @@ option = {
         }
     },
     legend: {
-        data: ['Breast Cancer Survivor','Breast Cancer Death', 
-        'Ovarian cancer Survivor', 'Ovarian cancer Death',
-        'Colon and rectum cancer Survivor', 'Colon and rectum cancer Death', 
-        'Cervical cancer Survivor','Cervical cancer Death',
-        'Lung cancer Survivor','Lung cancer Death'],
+        data: ['Breast Cancer',
+        'Ovarian cancer ',
+        'Colon and rectum cancer',
+        'Cervical cancer',
+        'Lung cancer'],
         x: 'center', // 'right' | 'center' | 'left' | {number},
         y: 'bottom', // 'top' | 'center' | 'bottom' | {number}
     },
@@ -291,10 +291,10 @@ option = {
     },
     series: [
         {
-            name: 'Breast Cancer Survivor',
+            name: 'Breast Cancer',
             type: 'bar',
             stack:'bc',
-            data: [1610,1565,1656,1639,1649],
+            data: [1939,1992,2045,2025,2038],
             label: seriesLabel,
             markPoint: {
                 symbolSize: 1,
@@ -303,67 +303,32 @@ option = {
             }
         },
         {
-            name: 'Breast Cancer Death',
-            type: 'bar',
-            stack:'bc',
-            label: seriesLabel,
-            data: [380,388,395,393,396]
-        },
-        {
-            name: 'Ovarian cancer Survivor',
+            name: 'Ovarian cancer',
             type: 'bar',
             stack:'oc',
             label: seriesLabel,
-            data: [124,125,128,127,128]
+            data: [250,252,257,255,259]
         },
         {
-            name: 'Ovarian cancer Death',
-            type: 'bar',
-            stack:'oc',
-            label: seriesLabel,
-            data: [125,127,128,128,131]
-        },
-        {
-            name: 'Colon and rectum cancer Survivor',
+            name: 'Colon and rectum cancer',
             type: 'bar',
             stack:'crc',
             label: seriesLabel,
-            data: [1331,1389,1448,1492,1548]
+            data: [853,840,928,950,983]
         },
         {
-            name: 'Colon and rectum cancer Death',
-            type: 'bar',
-            stack:'crc',
-            label: seriesLabel,
-            data: [749,769,795,815,845]
-        },
-        {
-            name: 'Cervical cancer Survivor',
+            name: 'Cervical cancer',
             type: 'bar',
             stack:'cc',
             label: seriesLabel,
-            data: [184,188,193,191,188]
+            data: [259,264,271,269,268]
         },
         {
-            name: 'Cervical cancer Death',
-            type: 'bar',
-            stack:'cc',
-            label: seriesLabel,
-            data: [75,76,77,78,79]
-        },
-        {
-            name: 'Lung cancer Survivor',
+            name: 'Lung cancer',
             type: 'bar',
             stack:'lc',
             label: seriesLabel,
-            data: [402,424,441,458,476]
-        },
-        {
-            name: 'Lung cancer Death',
-            type: 'bar',
-            stack:'lc',
-            label: seriesLabel,
-            data: [1135,1150,1160,1187,1231]
+            data: [471,486,505,523,548]
         }
     ]
 };
