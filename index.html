@@ -4,6 +4,9 @@
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
@@ -94,7 +97,7 @@
         </div>
       </div>
       <div class="row justify-content-center">
-
+        <div data-aos="fade-up">
         <div class="col-lg-4">
           <div class="flip-card">
             <div class="flip-card-inner">
@@ -110,7 +113,7 @@
             </div>
           </div>
         </div>
-
+      </div>
         <div class="col-lg-4">
           <div class="flip-card">
             <div class="flip-card-inner">
@@ -125,7 +128,7 @@
             </div>
           </div>
         </div>
-
+        
         <div class="col-lg-4">
           <div class="flip-card">
             <div class="flip-card-inner">
@@ -194,14 +197,13 @@
     }
     window.onload = function() {
       document.getElementById('navbar2').style.display = 'none';
+      AOS.init();
     };
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
       document.getElementById('navbar1').style.display = 'none';
       document.getElementById('navbar2').style.display = 'block';
       document.getElementById("navbar-toggler2").style.marginLeft = "170px";
-      //document.getElementById("navbar-toggler1").style.display = "block";
-      //document.getElementById("navbar-toggler2").style.display = "none";
     }
 
     function closeNav() {
@@ -209,10 +211,6 @@
       document.getElementById('navbar1').style.display = 'block';
       document.getElementById('navbar2').style.display = 'none';
       document.getElementById("navbar-toggler1").style.marginLeft = "0px";
-
-      //document.getElementById("navbar-toggler1").style.display = "none";
-      //  document.getElementById("navbar-toggler2").style.display = "block";
-
     }
   </script>
   <!-- Start Navigation -->
