@@ -6,83 +6,14 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script type="text/javascript">
-  var data = [{
-  type: "sunburst",
-  ids: [
-    "2013","2014", "2015", "2016", "2017","2013-Death","2013-Survivor",
-    "2014-Death","2014-Survivor",
-    "2015-Death","2015-Survivor",
-    "2016-Death","2016-Survivor",
-    "2017-Death","2017-Survivor",
-    "2013-Death-15-49yrs","2013-Death-50-69yrs","2013-Death-70-79yrs","2013-Death-80-94yrs","2013-Death-95yrs above",
-    "2013-Survivor-15-49yrs","2013-Survivor-50-69yrs","2013-Survivor-70-79yrs","2013-Survivor-80-94yrs","2013-Survivor-95yrs above",
-    "2014-Death-15-49yrs","2014-Death-50-69yrs","2014-Death-70-79yrs","2014-Death-80-94yrs","2014-Death-95yrs above",
-    "2014-Survivor-15-49yrs","2014-Survivor-50-69yrs","2014-Survivor-70-79yrs","2014-Survivor-80-94yrs","2014-Survivor-95yrs above",
-    "2015-Death-15-49yrs","2015-Death-50-69yrs","2015-Death-70-79yrs","2015-Death-80-94yrs","2015-Death-95yrs above",
-    "2015-Survivor-15-49yrs","2015-Survivor-50-69yrs","2015-Survivor-70-79yrs","2015-Survivor-80-94yrs","2015-Survivor-95yrs above",
-    "2016-Death-15-49yrs","2016-Death-50-69yrs","2016-Death-70-79yrs","2016-Death-80-94yrs","2016-Death-95yrs above",
-    "2016-Survivor-15-49yrs","2016-Survivor-50-69yrs","2016-Survivor-70-79yrs","2016-Survivor-80-94yrs","2016-Survivor-95yrs above",
-    "2017-Death-15-49yrs","2017-Death-50-69yrs","2017-Death-70-79yrs","2017-Death-80-94yrs","2017-Death-95yrs above",
-    "2017-Survivor-15-49yrs","2017-Survivor-50-69yrs","2017-Survivor-70-79yrs","2017-Survivor-80-94yrs","2017-Survivor-95yrs above"
-  ],
-  labels: [
-    "2013", "2014", "2015","2016","2017", "Death", "Survivor", "Death", "Survivor", "Death", "Survivor", "Death", "Survivor", "Death", "Survivor", 
-    "15-49yrs","50-69yrs","70-79yrs","80-94yrs","95yrs above","15-49yrs","50-69yrs","70-79yrs","80-94yrs","95yrs above",
-    "15-49yrs","50-69yrs","70-79yrs","80-94yrs","95yrs above","15-49yrs","50-69yrs","70-79yrs","80-94yrs","95yrs above",
-    "15-49yrs","50-69yrs","70-79yrs","80-94yrs","95yrs above","15-49yrs","50-69yrs","70-79yrs","80-94yrs","95yrs above",
-    "15-49yrs","50-69yrs","70-79yrs","80-94yrs","95yrs above","15-49yrs","50-69yrs","70-79yrs","80-94yrs","95yrs above",
-    "15-49yrs","50-69yrs","70-79yrs","80-94yrs","95yrs above","15-49yrs","50-69yrs","70-79yrs","80-94yrs","95yrs above"
-  ],
-  parents: [
-    "", "", "", "", "", "2013","2013","2014","2014","2015","2015","2016","2016","2017","2017",
-    "2013-Death","2013-Death","2013-Death","2013-Death","2013-Death",
-    "2013-Survivor","2013-Survivor","2013-Survivor","2013-Survivor","2013-Survivor",
-    "2014-Death","2014-Death","2014-Death","2014-Death","2014-Death",
-    "2014-Survivor","2014-Survivor","2014-Survivor","2014-Survivor","2014-Survivor",
-    "2015-Death","2015-Death","2015-Death","2015-Death","2015-Death",
-    "2015-Survivor","2015-Survivor","2015-Survivor","2015-Survivor","2015-Survivor",
-    "2016-Death","2016-Death","2016-Death","2016-Death","2016-Death",
-    "2016-Survivor","2016-Survivor","2016-Survivor","2016-Survivor","2016-Survivor",
-    "2017-Death","2017-Death","2017-Death","2017-Death","2017-Death",
-    "2017-Survivor","2017-Survivor","2017-Survivor","2017-Survivor","2017-Survivor"
-  ],
-  values:  [1946, 1999, 2051, 2032,  2045, //5 Years total
-  380,1565, //2013 Death, Survivor
-  388, 1610, //2014 Death, Survivor
-  395, 1656, //2015 Death, Survivor
-  393, 1639, //2016 Death, Survivor
-  396, 1649,//2017 Death, Survivor
-  81,200,47,48,4,//2013 Death Range
-  627,733,130,69,5,//2013 Survivor Range
-  81,203,46,52,5,//2014 Death Range
-  636,755,146,66,6,//2014 Survivor Range
-  82,205,46,56,4,//2015 Death Range
-  658,770,138,83,7,//2015 Survivor Range
-  78,204,46,58,4,//2016 Death Range
-  633,772,138,87,7,//2016 Survivor Range  
-  77,205,48,59,5,//2017 Death Range
-  628,777,146,89,7//2017 Survivor Range  
-  ],
-  outsidetextfont: {size: 20, color: "#377eb8"},
-  // leaf: {opacity: 0.4},
-  marker: {line: {width: 2}},
-  branchvalues: 'total'
-}];
-
-var layout = {
-  margin: {l: 0, r: 0, b: 0, t:0},
-  sunburstcolorway:["#636efa","#ef553b","#00cc96"],
-};  
   </script>
+
 </head>
 
 <body>
@@ -120,9 +51,6 @@ var layout = {
       <div class="container">
         <div class="main_title">
           <h1 class="text-center">Death Rate</h1>
-        </div>
-        <div style="height:370px;">
-          <div id="chart_div"  style="height: 100%"></div>
         </div>
       </div>
     </div> <!-- End Container 3 -->
@@ -184,7 +112,6 @@ var layout = {
 
     window.onload = function () {
       document.getElementById('navbar2').style.display = 'none';
-      Plotly.newPlot('chart_div', data, layout, {showSendToCloud:true});
     };
 
     function openNav() {
