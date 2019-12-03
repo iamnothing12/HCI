@@ -64,7 +64,7 @@
   /* Style the back side */
   .flip-card-back {
     background-position: center;
-    background-color: grey;
+    background-color: #404040;
     border-radius: 19%;
     color: black;
     transform: rotateY(180deg);
