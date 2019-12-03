@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        </script>
 
 </head>
 
@@ -31,27 +31,28 @@
                 </div>
                 <div class="col-lg-6 col-md-6 header-left bg-light">
                     <div class="">
-                            <div class="container-wrapper-genially justify-content-center" style="position: relative; min-height: 400px; max-width: 100%;">
-                                    <img src="https://genially.blob.core.windows.net/genially/version3.0/loader.gif"
-                                        class="loader-genially"
-                                        style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin-top: auto; margin-right: auto; margin-bottom: auto; margin-left: auto; z-index: 1;width: 80px; height: 80px;" />
-                                    <div id="5de204e77d30510faef0d37a" class="genially-embed"
-                                        style="margin: 0px auto; position: relative; height: auto; width: 100%;"></div>
-                                </div>
-                            <script>
-                                (function (d) {
-                                    var js, id = "genially-embed-js",
-                                        ref = d.getElementsByTagName("script")[0];
-                                    if (d.getElementById(id)) {
-                                        return;
-                                    }
-                                    js = d.createElement("script");
-                                    js.id = id;
-                                    js.async = true;
-                                    js.src = "https://view.genial.ly/static/embed/embed.js";
-                                    ref.parentNode.insertBefore(js, ref);
-                                }(document));
-                            </script>
+                        <div class="container-wrapper-genially justify-content-center"
+                            style="position: relative; min-height: 400px; max-width: 100%;">
+                            <img src="https://genially.blob.core.windows.net/genially/version3.0/loader.gif"
+                                class="loader-genially"
+                                style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin-top: auto; margin-right: auto; margin-bottom: auto; margin-left: auto; z-index: 1;width: 80px; height: 80px;" />
+                            <div id="5de204e77d30510faef0d37a" class="genially-embed"
+                                style="margin: 0px auto; position: relative; height: auto; width: 100%;"></div>
+                        </div>
+                        <script>
+                            (function (d) {
+                                var js, id = "genially-embed-js",
+                                    ref = d.getElementsByTagName("script")[0];
+                                if (d.getElementById(id)) {
+                                    return;
+                                }
+                                js = d.createElement("script");
+                                js.id = id;
+                                js.async = true;
+                                js.src = "https://view.genial.ly/static/embed/embed.js";
+                                ref.parentNode.insertBefore(js, ref);
+                            }(document));
+                        </script>
                         <!--<img class="img-fluid img-grey w-100" style="padding:0px;"
                             src="https://picsum.photos/id/1027/500/500" alt="">-->
                     </div>
@@ -64,26 +65,37 @@
                 <div class="main_title">
                     <h1 class="text-center">What are the symptoms?</h1>
                 </div>
-                    
+
             </div>
         </section> <!-- End Container 2 -->
-        <!-- Start Navigation -->
-        <nav class="navbar fixed-top navbar-light transparent">
-            <button class="navbar-toggler transparent" id="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNav()">
-                <span class="navbar-dark transparent navbar-toggler-icon"></span>
-            </button>
-        </nav>
-        <div id="mySidenav" class="sidenav bg-dark">
-            <a href="index.html"">Home</a>
-            <a class=" text-white" href="stats.html">Statistics</a>
-            <a class="text-white" href="detect.html">Early Detection</a>
-            <a class="text-white" href="prevent.html">Prevention</a>
-            <a class="text-white" href="contact.html">Contact</a>
-        </div>
-        <!-- End Navigation -->
+
     </div> <!-- Main Container -->
+    <nav id="navbar1" class="navbar fixed-top navbar-light transparent">
+        <button class="navbar-toggler transparent" id="navbar-toggler1" type="button" data-toggle="collapse"
+          data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+          aria-label="Toggle navigation" onclick="toggleNav()">
+          <span class="navbar-dark transparent navbar-toggler-icon"></span>
+        </button>
+        
+      </nav>
+      <nav id="navbar2" class="navbar fixed-top navbar-dark transparent">
+          <button class="navbar-toggler transparent" id="navbar-toggler2" type="button" data-toggle="collapse"
+            data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+            aria-label="Toggle navigation" onclick="toggleNav()">
+            <span class="navbar-light transparent navbar-toggler-icon"></span>
+          </button>
+          
+        </nav>
+    
+      <div id="mySidenav" class="sidenav bg-dark">
+          <ul class="list menu-left">
+            <li><a class="text-white" href="index.html"">Home</a></li>
+            <li><a class=" text-white" href="stats.html">Statistics</a></li>
+            <li><a class="text-white" href="detect.html">Early Detection</a></li>
+            <li><a class="text-white" href="prevent.html">Prevention</a></li>
+            <li><a class="text-white" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
 
     <script>
         $('.carousel').carousel({
@@ -102,14 +114,21 @@
             return openNav();
         }
 
+        window.onload = function () {
+            document.getElementById('navbar2').style.display = 'none';
+        };
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("navbar-toggler").style.marginLeft = "170px";
+            document.getElementById('navbar1').style.display = 'none';
+            document.getElementById('navbar2').style.display = 'block';
+            document.getElementById("navbar-toggler2").style.marginLeft = "170px";
         }
 
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("navbar-toggler").style.marginLeft = "0px";
+            document.getElementById('navbar1').style.display = 'block';
+            document.getElementById('navbar2').style.display = 'none';
+            document.getElementById("navbar-toggler1").style.marginLeft = "0px";
         }
     </script>
 

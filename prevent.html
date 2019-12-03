@@ -62,15 +62,25 @@
     </section> <!-- End Container 2 -->
     <!--Container 3-->
     
-    <!-- Start Navigation -->
-    <nav class="navbar fixed-top navbar-light transparent">
-      <button class="navbar-toggler transparent" id="navbar-toggler" type="button" data-toggle="collapse"
+  </div> <!-- Main Container -->
+  <nav id="navbar1" class="navbar fixed-top navbar-light transparent">
+    <button class="navbar-toggler transparent" id="navbar-toggler1" type="button" data-toggle="collapse"
+      data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+      aria-label="Toggle navigation" onclick="toggleNav()">
+      <span class="navbar-dark transparent navbar-toggler-icon"></span>
+    </button>
+    
+  </nav>
+  <nav id="navbar2" class="navbar fixed-top navbar-dark transparent">
+      <button class="navbar-toggler transparent" id="navbar-toggler2" type="button" data-toggle="collapse"
         data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
         aria-label="Toggle navigation" onclick="toggleNav()">
-        <span class="navbar-dark transparent navbar-toggler-icon"></span>
+        <span class="navbar-light transparent navbar-toggler-icon"></span>
       </button>
+      
     </nav>
-    <div id="mySidenav" class="sidenav bg-dark">
+
+  <div id="mySidenav" class="sidenav bg-dark">
       <ul class="list menu-left">
         <li><a class="text-white" href="index.html"">Home</a></li>
         <li><a class=" text-white" href="stats.html">Statistics</a></li>
@@ -79,9 +89,7 @@
         <li><a class="text-white" href="contact.html">Contact</a></li>
       </ul>
     </div>
-    <!-- End Navigation -->
   </div> <!-- Main Container -->
-
   <script>
     $('.carousel').carousel({
       interval: 2000
@@ -98,15 +106,21 @@
       }
       return openNav();
     }
-
+    window.onload = function() {
+      document.getElementById('navbar2').style.display = 'none';
+    };
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("navbar-toggler").style.marginLeft = "170px";
+      document.getElementById('navbar1').style.display = 'none';
+      document.getElementById('navbar2').style.display = 'block';
+      document.getElementById("navbar-toggler2").style.marginLeft = "170px";
     }
 
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("navbar-toggler").style.marginLeft = "0px";
+      document.getElementById('navbar1').style.display = 'block';
+      document.getElementById('navbar2').style.display = 'none';
+      document.getElementById("navbar-toggler1").style.marginLeft = "0px";
     }
   </script>
 
