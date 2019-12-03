@@ -58,28 +58,6 @@
       </div>
     </section> <!-- End Container 2 -->
     <!--Container 3-->
-    <section class="section_gap">
-        <div class="container">
-          <div class="main_title">
-            <h1 class="text-center">Yearly Affected Female Statistics</h1>
-          </div>
-          <div style="height:600px;">
-              <div class="d-flex">
-                  <div class="col-md-6 text-right">
-                      <img class="img2 img-fluid" src="image/151.png" alt="1 in 151 women suffering from breast cancer">
-                  </div>
-                  <div class="col-md-6 text-left">
-                      <h2>2017 Statistics</h2>
-                      <p>1 in 151 women are currently suffering from Breast Cancer.
-                      </p>
-                  </div>
-                  
-                </div>
-            </div>
-        </div>
-      </section> <!-- End Container 3 -->
-
-    <!--Container 4-->
     <div>
       <div class="container">
         <div class="main_title">
@@ -89,7 +67,7 @@
           <div id="chart_div"  style="height: 100%"></div>
         </div>
       </div>
-    </div> <!-- End Container 4 -->
+    </div> <!-- End Container 3 -->
 
   </div> <!-- Main Container -->
   <!-- Start Navigation -->
@@ -249,11 +227,11 @@ option = {
         }
     },
     legend: {
-        data: ['Breast Cancer',
-        'Ovarian cancer',
-        'Colon and rectum cancer',
-        'Cervical cancer',
-        'Lung cancer'],
+        data: ['Breast Cancer Survivor','Breast Cancer Death', 
+        'Ovarian cancer Survivor', 'Ovarian cancer Death',
+        'Colon and rectum cancer Survivor', 'Colon and rectum cancer Death', 
+        'Cervical cancer Survivor','Cervical cancer Death',
+        'Lung cancer Survivor','Lung cancer Death'],
         x: 'center', // 'right' | 'center' | 'left' | {number},
         y: 'bottom', // 'top' | 'center' | 'bottom' | {number}
     },
@@ -313,10 +291,10 @@ option = {
     },
     series: [
         {
-            name: 'Breast Cancer',
+            name: 'Breast Cancer Survivor',
             type: 'bar',
             stack:'bc',
-            data: [1939,1992,2045,2025,2038],
+            data: [1610,1565,1656,1639,1649],
             label: seriesLabel,
             markPoint: {
                 symbolSize: 1,
@@ -325,32 +303,67 @@ option = {
             }
         },
         {
-            name: 'Ovarian cancer',
+            name: 'Breast Cancer Death',
+            type: 'bar',
+            stack:'bc',
+            label: seriesLabel,
+            data: [380,388,395,393,396]
+        },
+        {
+            name: 'Ovarian cancer Survivor',
             type: 'bar',
             stack:'oc',
             label: seriesLabel,
-            data: [250,252,257,255,259]
+            data: [124,125,128,127,128]
         },
         {
-            name: 'Colon and rectum cancer',
+            name: 'Ovarian cancer Death',
+            type: 'bar',
+            stack:'oc',
+            label: seriesLabel,
+            data: [125,127,128,128,131]
+        },
+        {
+            name: 'Colon and rectum cancer Survivor',
             type: 'bar',
             stack:'crc',
             label: seriesLabel,
-            data: [853,840,928,950,983]
+            data: [1331,1389,1448,1492,1548]
         },
         {
-            name: 'Cervical cancer',
+            name: 'Colon and rectum cancer Death',
+            type: 'bar',
+            stack:'crc',
+            label: seriesLabel,
+            data: [749,769,795,815,845]
+        },
+        {
+            name: 'Cervical cancer Survivor',
             type: 'bar',
             stack:'cc',
             label: seriesLabel,
-            data: [259,264,271,269,268]
+            data: [184,188,193,191,188]
         },
         {
-            name: 'Lung cancer',
+            name: 'Cervical cancer Death',
+            type: 'bar',
+            stack:'cc',
+            label: seriesLabel,
+            data: [75,76,77,78,79]
+        },
+        {
+            name: 'Lung cancer Survivor',
             type: 'bar',
             stack:'lc',
             label: seriesLabel,
-            data: [471,486,505,523,548]
+            data: [402,424,441,458,476]
+        },
+        {
+            name: 'Lung cancer Death',
+            type: 'bar',
+            stack:'lc',
+            label: seriesLabel,
+            data: [1135,1150,1160,1187,1231]
         }
     ]
 };
