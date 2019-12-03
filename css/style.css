@@ -63,8 +63,8 @@
   
   /* Style the back side */
   .flip-card-back {
-    background-image: url("../image/men.jpg");
-    background-color: white;
+    /* background-image: url("../image/men.jpg"); */
+    background-color: grey;
     border-radius: 19%;
     color: white;
     transform: rotateY(180deg);
