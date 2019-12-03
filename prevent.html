@@ -19,8 +19,8 @@
 <body>
   <div id="mainContent">
     <div class="container-fluid">
-      <!-- Container1 -->
-      <div class="row d-flex align-items-center justify-content-center bg-custompink">
+      <!-- Container 1 -->
+      <div class="row d-flex align-items-center justify-content-center">
         <div class="header-right col-lg-6 col-md-6">
           <h1>
             Prevention Measures
@@ -29,14 +29,14 @@
             If you had been diagnosed with breast cancer or have detected early signs of the condition,
             there are some factors that you can change to reduce the risk to a minimum and defeat the cancer.
           </p>
-         
+
         </div>
         <div class="col-lg-6 col-md-6 header-left bg-light">
           <div class="">
-            <img class="img-fluid img-grey w-100" style="padding:0px;" src="https://picsum.photos/id/646/500/500"
+            <img class="img-fluid img-grey w-100" style="padding:0px;" src="https://picsum.photos/id/646/500/400"
               alt="">
           </div>
-         
+
         </div>
       </div>
     </div><!-- End Container1 -->
@@ -55,41 +55,42 @@
               <h1 class="text-center">Methods</h1>
               <>
             </div>
-            
+
           </div>
         </div>
       </div>
     </section> <!-- End Container 2 -->
     <!--Container 3-->
-    
+
   </div> <!-- Main Container -->
+  <!-- Start Navigation -->
   <nav id="navbar1" class="navbar fixed-top navbar-light transparent">
     <button class="navbar-toggler transparent" id="navbar-toggler1" type="button" data-toggle="collapse"
       data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
       aria-label="Toggle navigation" onclick="toggleNav()">
       <span class="navbar-dark transparent navbar-toggler-icon"></span>
     </button>
-    
+
   </nav>
   <nav id="navbar2" class="navbar fixed-top navbar-dark transparent">
-      <button class="navbar-toggler transparent" id="navbar-toggler2" type="button" data-toggle="collapse"
-        data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
-        aria-label="Toggle navigation" onclick="toggleNav()">
-        <span class="navbar-light transparent navbar-toggler-icon"></span>
-      </button>
-      
-    </nav>
+    <button class="navbar-toggler transparent" id="navbar-toggler2" type="button" data-toggle="collapse"
+      data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+      aria-label="Toggle navigation" onclick="toggleNav()">
+      <span class="navbar-light transparent navbar-toggler-icon"></span>
+    </button>
 
-  <div id="mySidenav" class="sidenav bg-dark">
-      <ul class="list menu-left">
-        <li><a class="text-white" href="index.html"">Home</a></li>
+  </nav>
+
+  <div id="mySidenav" class="sidenav1 bg-dark">
+    <ul class="list menu-left">
+      <li><a class="text-white" href="index.html"">Home</a></li>
         <li><a class=" text-white" href="stats.html">Statistics</a></li>
-        <li><a class="text-white" href="detect.html">Early Detection</a></li>
-        <li><a class="text-white" href="prevent.html">Prevention</a></li>
-        <li><a class="text-white" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div> <!-- Main Container -->
+      <li><a class="text-white" href="detect.html">Early Detection</a></li>
+      <li><a class="text-white" href="prevent.html">Prevention</a></li>
+      <li><a class="text-white" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <!-- End Navigation -->
   <script>
     $('.carousel').carousel({
       interval: 2000
@@ -106,9 +107,10 @@
       }
       return openNav();
     }
-    window.onload = function() {
+    window.onload = function () {
       document.getElementById('navbar2').style.display = 'none';
     };
+
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
       document.getElementById('navbar1').style.display = 'none';
