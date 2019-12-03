@@ -8,7 +8,7 @@
     border: none;
     text-align: left;
     outline: none;
-    font-size: 20px;
+    font-size: 25px;
   }
   
   .active, .collapsible:hover {
@@ -63,11 +63,16 @@
   
   /* Style the back side */
   .flip-card-back {
-    /* background-image: url("../image/men.jpg"); */
+    background-position: center;
     background-color: grey;
     border-radius: 19%;
-    color: white;
+    color: black;
     transform: rotateY(180deg);
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
   }
 
 .flip-card-padding-top{
