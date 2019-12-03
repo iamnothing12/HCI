@@ -10,13 +10,13 @@
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
+    </script>
 
 </head>
 
@@ -90,44 +90,55 @@
       </div>
     </section> <!-- End Container 2 -->
 
+
     <section class="section_gap">
       <!-- Container 3 -->
-      <div class="container">
+      <div class="container accordion" id="accordionExample">
         <div class="main_title">
           <h1 class="text-center">Cancer Stages</h1>
         </div>
-        <button class="collapsible" style="background-color: #efc7d1">Stages 0 and 1</button>
-        <div class="content">
-          <!-- Content 1-->
-          <div class="row align-items-center justify-content-center">
-            <div class="col-lg-5 offset-lg-1">
-              <div class="left-content">
-                <h2>Non-Invasive Cancer</h2>
-                <p>The cancer cells have not spread to the other surrounding tissues. At such an early stage, this
-                  disease can be highly treatable using either of the following methods: </p>
-
-                <p>Treatment:</p>
-                <ul>
-                  <li>Clinical Breast Examination</li>
-                  <li>Hormone Therapy</li>
-                  <li>Surgery and/or Radiation</li>
-                </ul>
+        <div class="card"><!-- Content 1-->
+          <div class="card-header" id="headingOne" style="background-color: #efc7d1;">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsible bg-transparent" type="button" data-toggle="collapse"
+                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Stages 0 and 1
+              </button>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body d-flex">
+              <div class="col-md-6">
+                  <h2>Invasive Cancer</h2>
+                  <p>The cancer cells are growing larger but still contained within the breast but have affected nearby
+                    breast tissues. At this stage, to treat this disease, the following treatments may be considered:
+                  </p>
+  
+                  <p>Treatment:</p>
+                  <ul>
+                    <li>Surgery</li>
+                    <li>Combination Therapy (Hormone Therapy and/or Radiation Therapy and/or Chemotherapy)</li>
+                  </ul>
               </div>
-            </div>
-            <div class="col-lg-5 offset-lg-1">
-              <div class="right-content">
-                <img class="img2 img-fluid" src="image/t1.jpg" alt="A single breast Anatomy">
+              <div class="col-md-6  text-right">
+                  <img class="img2 img-fluid" src="image/t1.jpg" alt="A single breast Anatomy">
               </div>
             </div>
           </div>
-        </div> <!-- End content 1 -->
-        <!-- Content 2 -->
-        <button class="collapsible" style="background-color: #e9afbe">Stage 2</button>
-        <div class="content">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-lg-5 offset-lg-1">
-              <div class="left-content">
-                <h2>Invasive Cancer</h2>
+        </div><!-- End content 1 -->
+        <div class="card"> <!-- Content 2 -->
+            <div class="card-header" id="headingTwo" style="background-color: #e9afbe;">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsible bg-transparent" type="button" data-toggle="collapse"
+                  data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  Stages 2
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body d-flex">
+                <div class="col-md-6">
+                    <h2>Invasive Cancer</h2>
                 <p>The cancer cells are growing larger but still contained within the breast but have affected nearby
                   breast tissues. At this stage, to treat this disease, the following treatments may be considered:
                 </p>
@@ -137,22 +148,26 @@
                   <li>Surgery</li>
                   <li>Combination Therapy (Hormone Therapy and/or Radiation Therapy and/or Chemotherapy)</li>
                 </ul>
+                </div>
+                <div class="col-md-6  text-right">
+                    <img class="img2 img-fluid" src="image/t2.jpg" alt="A single breast Anatomy">
+                </div>
               </div>
             </div>
-            <div class="col-lg-5 offset-lg-1">
-              <div class="right-content">
-                <img class="img2 img-fluid" src="image/t2.jpg" alt="A single breast Anatomy">
-              </div>
+          </div><!-- End Content 2 -->
+          <div class="card"> <!-- Content 3 -->
+            <div class="card-header" id="headingThree" style="background-color: #e39cad;">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsible bg-transparent" type="button" data-toggle="collapse"
+                  data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                  Stages 3
+                </button>
+              </h2>
             </div>
-          </div>
-        </div> <!-- End Content 2 -->
-        <!-- Content 3 -->
-        <button class="collapsible" style="background-color: #e39cad">Stage 3</button>
-        <div class="content">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-lg-5 offset-lg-1">
-              <div class="left-content">
-                <h2>Invasive Cancer</h2>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body d-flex">
+                <div class="col-md-6">
+                    <h2>Invasive Cancer</h2>
                 <p>The cancer cells or tumor worsens and have spread to nearby muscles with evident swelling,
                   inflamation or ulcers seen on the chest. At this stage, to treat this disease, the following
                   treatments may be considered:</p>
@@ -163,22 +178,26 @@
                   <li>Radiation</li>
                   <li>Surgery</li>
                 </ul>
+                </div>
+                <div class="col-md-6  text-right">
+                    <img class="img2 img-fluid" src="image/t3.jpg" alt="A single breast Anatomy">
+                </div>
               </div>
             </div>
-            <div class="col-lg-5 offset-lg-1">
-              <div class="right-content">
-                <img class="img2 img-fluid" src="image/t3.jpg" alt="A single breast Anatomy">
-              </div>
+          </div><!-- End Content 3 -->
+          <div class="card"> <!-- Content 4 -->
+            <div class="card-header" id="headingFour" style="background-color: #dd889d;">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsible bg-transparent" type="button" data-toggle="collapse"
+                  data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                  Stages 4
+                </button>
+              </h2>
             </div>
-          </div>
-        </div><!-- End Content 3 -->
-        <!-- Content 4 -->
-        <button class="collapsible" style="background-color: #dd889d">Stage 4</button>
-        <div class="content">
-          <div class="row align-items-center justify-content-center">
-            <div class="col-lg-5 offset-lg-1">
-              <div class="left-content">
-                <h2>Severely Invasive Cancer</h2>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body d-flex">
+                <div class="col-md-6">
+                    <h2>Severely Invasive Cancer</h2>
                 <p>Cancer have spread to other organs (brain, lungs, bones etc) At this stage, one can only hope to
                   depend on the following treatments to be considered:</p>
 
@@ -190,15 +209,14 @@
                   <li>Anticonvulsants for pain or neurologic condition</li>
                   <li>Local anesthetics for pain</li>
                 </ul>
+                </div>
+                <div class="col-md-6  text-right">
+                    <img class="img2 img-fluid" src="image/t4.jpg" alt="A single breast Anatomy">
+                </div>
               </div>
             </div>
-            <div class="col-lg-5 offset-lg-1">
-              <div class="right-content">
-                <img class="img2 img-fluid" src="image/t4.jpg" alt="A single breast Anatomy">
-              </div>
-            </div>
-          </div>
-        </div><!-- End Content 4 -->
+          </div><!-- End Content 4 -->
+        
       </div>
     </section> <!-- End Container 3 -->
 
@@ -224,7 +242,8 @@
                   <h3 class="text-light flip-card-padding-top">Males can have breast cancer</h3>
                   <p class="text-light">Even though males do not develop milk-producing breasts, a man's breast cells
                     and tissue can still develop cancer</p>
-                  <p class="text-light">Only one in a thousand men will ever be diagnosed with breast cancer</p>
+                  <p class="text-light" style="padding:3%">Only one in a thousand men will ever be diagnosed with breast
+                    cancer</p>
                 </div>
               </div>
             </div>
@@ -262,6 +281,7 @@
         </div>
       </div>
     </section> <!-- End Container 3 -->
+
 
   </div> <!-- Main Container -->
   <!-- Start Navigation -->
@@ -328,23 +348,6 @@
       document.getElementById("navbar-toggler1").style.marginLeft = "0px";
     }
 
-    // <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-        }
-      });
-    }
-    // 
-  </script>
   </script>
 
 </body>
