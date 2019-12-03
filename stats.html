@@ -26,14 +26,14 @@
             Statistics
           </h1>
           <p class="pt-20">
-            In Singapore, Breast Cancer is one of the highest occurrence cancer. <br>
+            In Singapore, Breast Cancer is one of the highest occurrence cancer.
             See for yourself the trend from data gathered over a 5 year-period below.
           </p>
         </div>
         <div class="col-lg-6 col-md-6 header-left bg-light">
           <div class="">
-            <img class="img-fluid img-grey w-100" style="padding:0px;width:500px;height:300px" src="image/Statistical Analysis.jpg"
-              alt="">
+            <img class="img-fluid img-grey w-100" style="padding:0px;width:500px;height:300px"
+              src="image/Statistical Analysis.jpg" alt="">
           </div>
         </div>
       </div>
@@ -64,33 +64,34 @@
     </div> <!-- End Container 4 -->
 
   </div> <!-- Main Container -->
+  <!-- Start Navigation -->
   <nav id="navbar1" class="navbar fixed-top navbar-light transparent">
     <button class="navbar-toggler transparent" id="navbar-toggler1" type="button" data-toggle="collapse"
       data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
       aria-label="Toggle navigation" onclick="toggleNav()">
       <span class="navbar-dark transparent navbar-toggler-icon"></span>
     </button>
-    
+
   </nav>
   <nav id="navbar2" class="navbar fixed-top navbar-dark transparent">
-      <button class="navbar-toggler transparent" id="navbar-toggler2" type="button" data-toggle="collapse"
-        data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
-        aria-label="Toggle navigation" onclick="toggleNav()">
-        <span class="navbar-light transparent navbar-toggler-icon"></span>
-      </button>
-      
-    </nav>
+    <button class="navbar-toggler transparent" id="navbar-toggler2" type="button" data-toggle="collapse"
+      data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+      aria-label="Toggle navigation" onclick="toggleNav()">
+      <span class="navbar-light transparent navbar-toggler-icon"></span>
+    </button>
 
-  <div id="mySidenav" class="sidenav bg-dark">
-      <ul class="list menu-left">
-        <li><a class="text-white" href="index.html"">Home</a></li>
+  </nav>
+
+  <div id="mySidenav" class="sidenav1 bg-dark">
+    <ul class="list menu-left">
+      <li><a class="text-white" href="index.html"">Home</a></li>
         <li><a class=" text-white" href="stats.html">Statistics</a></li>
-        <li><a class="text-white" href="detect.html">Early Detection</a></li>
-        <li><a class="text-white" href="prevent.html">Prevention</a></li>
-        <li><a class="text-white" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div> <!-- Main Container -->
+      <li><a class="text-white" href="detect.html">Early Detection</a></li>
+      <li><a class="text-white" href="prevent.html">Prevention</a></li>
+      <li><a class="text-white" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <!-- End Navigation -->
 
   <script>
     $('.carousel').carousel({
@@ -109,9 +110,10 @@
       return openNav();
     }
 
-    window.onload = function() {
+    window.onload = function () {
       document.getElementById('navbar2').style.display = 'none';
     };
+
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
       document.getElementById('navbar1').style.display = 'none';
@@ -125,8 +127,7 @@
       document.getElementById('navbar2').style.display = 'none';
       document.getElementById("navbar-toggler1").style.marginLeft = "0px";
     }
-</script>
-
+  </script>
 
 </body>
 

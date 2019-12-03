@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-        </script>
+    </script>
 
 </head>
 
@@ -58,7 +58,7 @@
                     </div>
                 </div>
             </div>
-        </div><!-- End Container1 -->
+        </div><!-- End Container 1 -->
         <!-- Container 2 -->
         <section class="section_gap">
             <div class="container">
@@ -70,32 +70,34 @@
         </section> <!-- End Container 2 -->
 
     </div> <!-- Main Container -->
+    <!-- Start Navigation -->
     <nav id="navbar1" class="navbar fixed-top navbar-light transparent">
         <button class="navbar-toggler transparent" id="navbar-toggler1" type="button" data-toggle="collapse"
-          data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
-          aria-label="Toggle navigation" onclick="toggleNav()">
-          <span class="navbar-dark transparent navbar-toggler-icon"></span>
+            data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
+            aria-label="Toggle navigation" onclick="toggleNav()">
+            <span class="navbar-dark transparent navbar-toggler-icon"></span>
         </button>
-        
-      </nav>
-      <nav id="navbar2" class="navbar fixed-top navbar-dark transparent">
-          <button class="navbar-toggler transparent" id="navbar-toggler2" type="button" data-toggle="collapse"
+
+    </nav>
+    <nav id="navbar2" class="navbar fixed-top navbar-dark transparent">
+        <button class="navbar-toggler transparent" id="navbar-toggler2" type="button" data-toggle="collapse"
             data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false"
             aria-label="Toggle navigation" onclick="toggleNav()">
             <span class="navbar-light transparent navbar-toggler-icon"></span>
-          </button>
-          
-        </nav>
-    
-      <div id="mySidenav" class="sidenav bg-dark">
-          <ul class="list menu-left">
+        </button>
+
+    </nav>
+
+    <div id="mySidenav" class="sidenav1 bg-dark">
+        <ul class="list menu-left">
             <li><a class="text-white" href="index.html"">Home</a></li>
-            <li><a class=" text-white" href="stats.html">Statistics</a></li>
+        <li><a class=" text-white" href="stats.html">Statistics</a></li>
             <li><a class="text-white" href="detect.html">Early Detection</a></li>
             <li><a class="text-white" href="prevent.html">Prevention</a></li>
             <li><a class="text-white" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
+        </ul>
+    </div>
+    <!-- End Navigation -->
 
     <script>
         $('.carousel').carousel({
@@ -117,6 +119,7 @@
         window.onload = function () {
             document.getElementById('navbar2').style.display = 'none';
         };
+
         function openNav() {
             document.getElementById("mySidenav").style.width = "250px";
             document.getElementById('navbar1').style.display = 'none';
