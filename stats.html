@@ -50,7 +50,7 @@
     <section class="section_gap">
       <div class="container">
         <div style="height:600px;">
-          <div id="chart_div2" style="height: 90%"></div><br><br>
+          <div id="chart_div2" style="height: 90%"></div><p class="text-center"><b>*Note:</b> Click boxes to filter</p><br><br>
           <p class="text-center">According to the Singapore Cancer Society, Breast Cancer ranks first in terms of the
             most prevailing cancer in Singapore compared to the other cancers.<br>
           <a href="https://www.singaporecancersociety.org.sg/learn-about-cancer/cancer-basics/common-types-of-cancer-in-singapore.html"> Click here </a> for more info.</p>
@@ -168,6 +168,7 @@
 
     var data = [{
       type: "sunburst",
+      maxdepth:2,
       ids: [
         "2013", "2014", "2015", "2016", "2017", "2013-Death", "2013-Survivor",
         "2014-Death", "2014-Survivor",
@@ -261,7 +262,7 @@
         b: 0,
         t: 0
       },
-      sunburstcolorway: ["#636efa", "#ef553b", "#00cc96"],
+      sunburstcolorway: ["#ffeecc","#ffddcc", "ffcccc", "#ffbbcc","#ff99b3"],
     };
 
     function loadOverallChart(myChart) {
@@ -389,7 +390,7 @@
             label: seriesLabel,
             data: [471, 486, 505, 523, 548]
           }
-        ]
+        ],
       };;
       if (option && typeof option === "object") {
         myChart.setOption(option, true);
