@@ -8356,7 +8356,7 @@ a.text-dark:hover {
 
 .sidenav1 a:hover {
   color: whitesmoke;
-  text-decoration: line-through;
+  text-decoration: underline;
 }
 
 .sidenav1 .closebtn {
